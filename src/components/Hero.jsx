@@ -20,6 +20,7 @@ const Hero = () => {
   // Add event listener to handle video source change
   useEffect(() => {
     window.addEventListener("resize", handleVideoSrcSet);
+    // Remove event listener for memory leak
     return () => {
       window.removeEventListener("resize", handleVideoSrcSet);
     };

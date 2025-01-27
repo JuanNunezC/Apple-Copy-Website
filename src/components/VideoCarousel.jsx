@@ -48,6 +48,7 @@ const VideoCarousel = () => {
   }, [isEnd, videoId]);
 
   useEffect(() => {
+    // Check if the video is playing and handle play/pause accordingly
     if (loadedData.length > 3) {
       if (!isPlaying) {
         videoRef.current[videoId].pause();
